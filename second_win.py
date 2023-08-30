@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import (QApplication,QWidget,QLabel,
                              QHBOxLayout ,QVBoxLayout,QGroupDox,QRadioButton,
                              QLineEdit,QPushButton )
 from instr import*
+from final_win import*
 
 class TextWin(QWidget):
     def self_appear(self):
@@ -13,7 +14,19 @@ class TextWin(QWidget):
     def initUI(self):
         self.text_timer=QLabel(txt_timer)
         self.text_name=QLabel(txt_name)
-        
+        self.line_name = QLineEdit(txt_hintname)
+        self.text_age= QLabel(txt_age)
+        self.line_age = QLineEdit(txt_hintage)
+        self.text_test1 = QLabel(txt_test1)
+        self.btn_test1 =QPushButton(txt_starttest1)
+        self.line_test1 =QLineEdit(txt_hinttest1)
+        self.text_test2 = QLabel(txt_test2)
+        self.btn_test2 = QPushButton(txt_starttest2)
+        self.text_test3 = QLabel(txt_test3)
+        self.btn_test3 = QPushButton(txt_starttest3)
+        self.line_test2=QLineEdit(txt_hinttest2)
+        self.line_test3=QLineEdit(txt_hinttest3)
+        self.btn_next = QPushButton(txt_sendresults)
 
 
 
@@ -46,4 +59,7 @@ class TextWin(QWidget):
 
 
     def connects(self):
-        pass
+        self.btn_next.clicked.connect(self.next_click)
+    def next_click(self):
+            self.fw=FinalWin()
+            self.hide()
