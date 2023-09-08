@@ -1,9 +1,9 @@
-import typing
+
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication,QWidget,QLabel,
-                            QHBOxLayout ,QVBoxLayout,QGroupDox,QRadioButton,
-                            QLineEdit,QPushButton )
+                            QHBOxLayout,QVBoxLayout,QGroupDox,QRadioButton,
+                            QLineEdit,QPushButton) 
 
 from instr import*
 from second_win import*
@@ -42,7 +42,7 @@ class MainWin(QWidget):
         self.tw=TextWin()
         self.hide()
         
-app = Application([])
+app =QApplication([])
 mw = MainWin()
 
 app.exec_()
